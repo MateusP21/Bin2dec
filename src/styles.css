@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  background-color: #00e454;
+  text-align: center;
+}
+
+body,
+textarea,
+input,
+button {
+  font-family: "Ubuntu", sans-serif;
+}
+button {
+  padding: 10px;
+  border-radius: 4px;
+  background-color: transparent;
+  border: 4px solid #282828;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+button:hover {
+  background-color: tomato;
+}
+textarea {
+  padding: 10px;
+  width: 400px;
+  height: 200px;
+  border: 4px solid #282828;
+  resize: none;
+  font-size: 24px;
+}
+.wrapper {
+  display: flex;
+}
+.wrapper div:first-child {
+  display: grid;
+  grid-gap: 10px;
+  grid-auto-flow: column;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.display {
+  padding: 10px;
+  width: 400px;
+  height: 200px;
+  background-color: #282828;
+  border: 4px solid lightgreen;
+}
+.display p {
+  color: #00e454;
+  font-size: 24px;
+}
+.container {
+  display: grid;
+  grid-gap: 20px;
+
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+@media only screen and (max-width: 1015px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .wrapper div:first-child {
+    grid-auto-flow: row;
+  }
+  textarea,
+  .display {
+    width: 200px;
+    height: 200px;
+  }
+
+  .display {
+    margin-top: 10px;
+  }
+}
